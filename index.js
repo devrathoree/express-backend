@@ -21,6 +21,9 @@ app.use((req, res, next) => {
 app.get('/api/v1/products', (req, res) => {
     res.status(200).json(DB.products);
 });
+app.get('/', (req, res) => {
+    res.status(200).send("<h1>Welcome-express-server</h1>");
+});
 
 // Error Handling Middleware
 app.use((err, req, res, next) => {
